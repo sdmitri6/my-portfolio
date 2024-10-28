@@ -1,0 +1,164 @@
+.cv-section {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 20px;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    overflow-y: auto;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    margin-bottom: 0px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 1);
+}
+
+.profile-name {
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: normal;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+h1, h2 {
+    margin: 2px 0;
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 10px;
+    animation: bounce 2s infinite;
+    position: relative;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+h1::after, h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #ff6f61, #de1d71);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h1:hover::after, h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #fff;
+}
+
+strong {
+    font-weight: normal;
+    color: #ff44cc;
+}
+
+.education, .experience, .skills, .additional-skills {
+    margin-top: 20px;
+}
+
+.skills ul, .additional-skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li, .additional-skills li {
+    margin-bottom: 10px;
+}
+
+.skills li strong, .additional-skills li strong {
+    color: #00ffff;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #00ffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #00ffff;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-section {
+        padding: 10px;
+    }
+
+    .contact-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+.skills ul li, .additional-skills ul li {
+    color: #fff;
+}

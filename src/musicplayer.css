@@ -1,0 +1,93 @@
+.music-player {
+    position: fixed; /* Stick the player to the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* Make the player full-width */
+    height: 80px; /* Reduced height for the player */
+    background-color: #1a1a1a;
+    color: #00ff99;
+    padding: 10px;
+    border-top: 2px solid #ff00ff; /* Border at the top */
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 15px #ff00ff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000; /* Ensure the player stays above other content */
+  }
+  
+  .music-player h2 {
+    font-size: 1em; /* Reduce font size */
+    color: #ff00ff;
+    text-shadow: 1px 1px #00ffff;
+    margin: 0; /* Remove extra margin */
+  }
+  
+  .music-player p {
+    font-size: 0.9em; /* Reduce text size */
+    margin-bottom: 0;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .controls button {
+    background-color: #222;
+    color: #00ff99;
+    border: 2px solid #ff00ff;
+    padding: 5px 10px; /* Adjust padding for smaller buttons */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .controls button:hover {
+    background-color: #00ff99;
+    color: #1a1a1a;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff00ff;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .options button {
+    background-color: #222;
+    color: #00ff99;
+    border: 2px solid #ff00ff;
+    padding: 5px 10px; /* Smaller button padding */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .options button:hover {
+    background-color: #ff00ff;
+    color: #1a1a1a;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ffff;
+  }
+  .song-list {
+  margin-top: 20px;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.song-item {
+  color: #00ff99;
+  cursor: pointer;
+  padding: 5px;
+  transition: background 0.3s;
+}
+
+.song-item:hover {
+  background-color: #ff00ff;
+  color: #1a1a1a;
+}

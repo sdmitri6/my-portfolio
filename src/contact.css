@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.contact {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #1a1a1a;
+    color: #00ffff; 
+    padding: 180px;
+    text-align: center;
+    border: 2px solid #00ffff; 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    margin: 5px 0 px;
+    width: 40%;
+    text-align: left; 
+}
+
+input, textarea {
+    width: 40%; 
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #00ffff; 
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
+
+textarea {
+    height: 80px; 
+}
+
+.submit-button {
+    background-color: #00ffff;
+    color: #1a1a1a; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #00ffff; /* Neon cyan */
+    font-size: 1.5em;
+    transition: transform 0.3s color;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    color: #0dbe0d;
+}
+
+.icon {
+    width: 40px; 
+    height: 40px; 
+}
+
+.confirmation-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #00ff00; 
+    color: #1a1a1a; 
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.webcam {
+    width: 100%; 
+    height: auto;
+    max-height: 80vh; 
+}
+
+.happy-hacking {
+    font-size: 1.5rem;
+    color: #00ff00; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+.webcam-container {
+    position: relative;
+    text-align: center;
+}
+
+.webcam {
+    width: 100%;
+    max-width: 700px; 
+    border: 2px solid #00ff00; 
+}
+
+.happy-hacking {
+    position: absolute;
+    left: 10px; 
+    top: 20px; 
+    font-size: 2rem; 
+    color: #00ff00; 
+    font-family: 'Press Start 2P', cursive; 
+    animation: explode 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+
+@media (max-width: 100px) {
+    .contact {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .happy-hacking {
+        font-size: 1.5rem;
+    }
+
+    .webcam {
+        max-width: 100%;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.social-media a {
+    margin: 0 20px; 
+    color: #00ffff; 
+    font-size: 2em; 
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.social-media a:hover {
+    transform: scale(1.3) rotate(10deg); 
+    color: #0dbe0d; 
+    text-shadow: 0 0 15px rgba(13, 190, 13, 0.9), 0 0 30px rgba(0, 255, 255, 0.7); 
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 10px #00ffff); 
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.social-media a:hover .icon {
+    animation: flicker 0.3s infinite alternate; 
+}
+
+.social-media:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0,255,255,0) 0%, rgba(0,255,255,1) 50%, rgba(0,255,255,0) 100%);
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.social-media:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0,255,255,0) 0%, rgba(0,255,255,1) 50%, rgba(0,255,255,0) 100%);
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+
+@media (max-width: 908px) {
+    .social-media a {
+        font-size: 1.5em; 
+    }
+
+    .icon {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .social-media:before, .social-media:after {
+        left: 5%; 
+        right: 5%;
+    }
+}
+

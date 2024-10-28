@@ -1,0 +1,497 @@
+.skills-container {
+  text-align: center;
+  padding: 4rem 2rem 2rem; /* Дээд талаас 4rem, доод талаас 2rem */
+  background-color: #0f0f0f;
+  color: #00ffff;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  text-shadow: 
+    0 0 10px #ff00ff, 
+    0 0 20px #00ffff, 
+    0 0 30px #ff00ff; 
+  margin-bottom: 2rem; 
+}
+
+.skills-title {
+  font-size: 3rem; /* Хэмжээг тохируулах */
+  color: #ff44cc; /* Change this to the Frontend color */
+  text-shadow: 
+    0 0 10px #ff0eff, /* Ягаан сүүдэр */
+    0 0 20px #ff44cc, /* Ягаан сүүдэр */
+    0 0 30px #ffcc00; /* Шар сүүдэр */
+  margin: 4rem 0 2rem; /* Дээд талаас 4rem, доод талаас 2rem */
+  animation: flicker 1.5s infinite alternate; /* Гялалзах анимаци */
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #ff44cc; /* Change this to the Frontend color */
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px #ff44cc, 0 0 20px #ff00ff;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ff44cc; /* Change this to the Frontend color */
+  text-shadow: 0 0 10px #ff44cc, 0 0 20px #ffcc00;
+}
+
+.skill-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skill-category {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex-basis: calc(33% - 2rem); /* Takes up a third of the row, minus the gap */
+  min-width: 250px;
+  position: relative;
+  margin-bottom: 2rem; /* Category spacing */
+}
+
+.skill-category:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #ff00ff; /* Cyberpunk neon color for the dividing line */
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Space between skill cards */
+}
+
+.skill-card {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 140px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 15px #ff00ff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #00ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Added for positioning the border */
+  overflow: hidden; /* Ensures the border stays within the card */
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px; /* Тохирох өндөр */
+  object-fit: cover; /* Зургийг дөрвөлжин хэмжээнд оруулах */
+  margin-bottom: 0.5rem;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #ff00ff; /* Cyberpunk neon color */
+  border-radius: 0; /* Remove rounded corners */
+  transform: rotate(0deg); /* Start with no rotation */
+  opacity: 0; /* Start invisible */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Animation for transform and opacity */
+}
+
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 0 20px #ff44cc;
+}
+
+.skill-card:hover::before {
+  transform: rotate(360deg); /* Rotate when hovered */
+  opacity: 1; /* Fade in the border */
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-category {
+    flex-basis: calc(50% - 2rem); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-category {
+    flex-basis: 100%; /* Stack on smaller screens */
+  }
+}
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-circle {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: #444; /* Background stroke color */
+  stroke-width: 10;
+}
+
+.progress-circle-fg {
+  fill: none;
+  stroke: #ff00ff; /* Foreground stroke color */
+  stroke-width: 10;
+  transition: stroke-dasharray 1.5s ease; /* Smooth transition */
+}
+.progress-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 10;
+}
+
+.progress-circle-fg {
+  fill: none;
+  stroke: #007bff; /* Change color as needed */
+  stroke-width: 10;
+  transition: stroke-dasharray 0.5s ease-in-out;
+}
+
+.skill-level {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.skill-level.reveal {
+  opacity: 0; /* Hide text initially */
+}
+
+.progress-circle-fg.rotate {
+  transform: rotate(180deg); /* Rotate the circle */
+}
+
+.skill-card {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05); /* Optional: Scale effect on hover */
+}
+.skills-container {
+  text-align: center;
+  padding: 2rem 1rem; /* Reduced padding */
+  background-color: #0f0f0f;
+  color: #00ffff;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem; /* Smaller font size */
+  text-shadow: 
+    0 0 8px #ff00ff, 
+    0 0 16px #00ffff, 
+    0 0 24px #ff00ff; 
+  margin-bottom: 1.5rem; /* Reduced margin */
+}
+
+.skills-title {
+  font-size: 2.5rem; /* Smaller size */
+  color: #ff44cc;
+  text-shadow: 
+    0 0 8px #ff0eff,
+    0 0 16px #ff44cc,
+    0 0 24px #ffcc00;
+  margin: 2rem 0; /* Reduced margins */
+  animation: flicker 1.5s infinite alternate;
+}
+
+h2 {
+  font-size: 2rem; /* Smaller size */
+  color: #ff44cc;
+  margin-bottom: 2rem; /* Reduced margin */
+  text-shadow: 0 0 8px #ff44cc, 0 0 16px #ff00ff;
+}
+
+h3 {
+  font-size: 1.5rem; /* Smaller size */
+  margin-bottom: 1rem; /* Reduced margin */
+  color: #ff44cc;
+  text-shadow: 0 0 8px #ff44cc, 0 0 16px #ffcc00;
+}
+
+.skill-category {
+  background-color: #1a1a1a;
+  padding: 1rem; /* Reduced padding */
+  border-radius: 10px;
+  flex-basis: calc(33% - 1rem); /* Adjust for smaller width */
+  min-width: 220px; /* Slightly reduced min-width */
+  position: relative;
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Reduced space between skill cards */
+}
+
+.skill-card {
+  background-color: #1a1a1a;
+  padding: 0.75rem; /* Reduced padding */
+  border-radius: 10px;
+  width: 120px; /* Smaller width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 10px #ff00ff;
+  text-transform: uppercase;
+  font-size: 0.9rem; /* Smaller font size */
+  color: #00ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-logo {
+  width: 50px; /* Smaller logo size */
+  height: 50px; /* Adjusted height */
+  object-fit: cover;
+  margin-bottom: 0.3rem; /* Reduced margin */
+}
+
+.progress-circle {
+  width: 80px; /* Smaller progress circle */
+  height: 80px; /* Smaller height */
+}
+
+.skill-level {
+  font-size: 1em; /* Smaller font size */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-category {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-category {
+    flex-basis: 100%; /* Stack on smaller screens */
+  }
+}
+
+.skills-container {
+  text-align: center;
+  padding: 2rem 1rem; /* Adjusted padding */
+  background-color: #0f0f0f;
+  color: #00ffff;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem; /* Smaller font size */
+  text-shadow: 
+    0 0 8px #ff00ff, 
+    0 0 16px #00ffff, 
+    0 0 24px #ff00ff; 
+  margin-bottom: 1.5rem; /* Reduced margin */
+}
+
+.skills-title {
+  font-size: 2.5rem; /* Smaller size */
+  color: #ff44cc;
+  text-shadow: 
+    0 0 8px #ff0eff,
+    0 0 16px #ff44cc,
+    0 0 24px #ffcc00;
+  margin: 2rem 0; /* Reduced margins */
+  animation: flicker 1.5s infinite alternate;
+}
+
+h2 {
+  font-size: 2rem; /* Smaller size */
+  color: #ff44cc;
+  margin-bottom: 2rem; /* Reduced margin */
+  text-shadow: 0 0 8px #ff44cc, 0 0 16px #ff00ff;
+}
+
+h3 {
+  font-size: 1.5rem; /* Smaller size */
+  margin-bottom: 1rem; /* Reduced margin */
+  color: #ff44cc;
+  text-shadow: 0 0 8px #ff44cc, 0 0 16px #ffcc00;
+}
+
+.skill-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Reduced gap */
+}
+
+.skill-category {
+  background-color: #1a1a1a;
+  padding: 1rem; /* Reduced padding */
+  border-radius: 10px;
+  flex-basis: calc(33% - 1rem); /* Adjusted for smaller width */
+  min-width: 220px; /* Slightly reduced min-width */
+  position: relative;
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+.skill-category:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #ff00ff; /* Cyberpunk neon color for the dividing line */
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Reduced space between skill cards */
+}
+
+.skill-card {
+  background-color: #1a1a1a;
+  padding: 0.75rem; /* Reduced padding */
+  border-radius: 10px;
+  width: 120px; /* Smaller width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 10px #ff00ff;
+  text-transform: uppercase;
+  font-size: 0.9rem; /* Smaller font size */
+  color: #00ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-logo {
+  width: 50px; /* Smaller logo size */
+  height: 50px; /* Adjusted height */
+  object-fit: cover;
+  margin-bottom: 0.3rem; /* Reduced margin */
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-circle {
+  width: 80px; /* Smaller progress circle */
+  height: 80px; /* Smaller height */
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: #444; /* Background stroke color */
+  stroke-width: 10;
+}
+
+.progress-circle-fg {
+  fill: none;
+  stroke: #ff00ff; /* Foreground stroke color */
+  stroke-width: 10;
+  transition: stroke-dasharray 1.5s ease; /* Smooth transition */
+}
+
+.skill-level {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em; /* Smaller font size */
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.skill-level.reveal {
+  opacity: 0; /* Hide text initially */
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-category {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-category {
+    flex-basis: 100%; 
+  }
+}

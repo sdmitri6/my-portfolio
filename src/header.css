@@ -1,0 +1,60 @@
+/* header.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Pixel font */
+
+.header {
+  background-color: #0d0d0d; /* Dark background */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #00ffcc; /* Neon cyan border */
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.logo a {
+  font-family: 'Press Start 2P', cursive; /* Pixelated font */
+  font-size: 24px;
+  color: #ff00ff; /* Neon pink color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #00ffcc; /* Neon cyan on hover */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+}
+
+.nav-links a {
+  color: #00ffcc; /* Neon cyan */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff00ff; /* Neon pink on hover */
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; /* Neon glow effect */
+}
+
+.header {
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  }
+}
